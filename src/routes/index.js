@@ -1,7 +1,7 @@
 const {Router} = require ('express');
 const router = Router();
 
-const Photo = require('../models/Photo');
+const Photo = require('../models/photo');
 
 
 const cloudinary = require('cloudinary');
