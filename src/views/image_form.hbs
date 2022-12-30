@@ -1,3 +1,24 @@
+<style>
+        html,
+      body {
+        background-image: url(https://res.cloudinary.com/tecnologi-zifrikc/image/upload/v1672364405/Testalbun/bg7_ys7j80.gif);
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+
+      body {
+       
+
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0%;
+        padding: 0%;
+      }
+</style>
+
 <div class="row">
    <div class="col-md-4">
     <div class="card">
@@ -33,17 +54,17 @@
    <div class="col-md-8">
        <table class="table">
            <thead>
-               <tr>
-                   <th>tittle</th>
-                   <th>Descripcion</th>
-                   <th>Operacion</th>
+               <tr >
+                   <th class="h6">Tittle</th>
+                   <th class="h6">Descripcion</th>
+                   <th class="h6">Operacion</th>
                </tr>
            </thead>
             <tbody>
                 {{#each photos}}
                 <tr>
-                    <td>{{title}}</td>
-                    <td>{{description}}</td>
+                    <td class="h6">{{title}}</td>
+                    <td class="h6">{{description}}</td>
                     <td>
                         <a href="{{imageURL}}" target="_blank" class="btn 
                         btn-primary">view</a>

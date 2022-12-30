@@ -3,8 +3,21 @@ const morgan = require('morgan');
 const multer = require('multer');
 const path = require('path');
 var exphbs = require('express-handlebars');
+
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const Handlebars = require('handlebars');
+
+let sound = new Audio('/src/views/layouts/sound1.mp3');
+playBtn.addEventListener('click', ()=>{
+  sound.play();
+});
+pauseBtn.addEventListener('click', ()=>{
+  sound.pause();
+});
+//require('./public/main.css');
+
+//styles azvt
+//app.use(express.static('public'));
 
 // Inicializadores azvt
 const app = express();

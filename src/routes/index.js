@@ -19,8 +19,8 @@ const fs = require('fs-extra');
 
 router.get('/', async (req, res)=> {
     const photos = await Photo.find().lean();
-    res.render('image', {photos});
-    //res.send('Hello milagros')
+    res.render('styles', {photos});
+    //res.send('Hello')
     //loista las imagenes subidas
 });
 
@@ -53,6 +53,13 @@ router.get('/image/delete/:photo_id', async (req, res) => {
     const result = cloudinary.v2.uploader.destroy(photo.public_id);
     console.log(result)
     res.redirect('/images/add');
-})
+});
+let sound = new Audio('/src/views/layouts/sound1.mp3');
+playBtn.addEventListener('click', ()=>{
+  sound.play();
+});
+pauseBtn.addEventListener('click', ()=>{
+  sound.pause();
+});
 
 module.exports = router;
