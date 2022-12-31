@@ -1,1 +1,0 @@
-const MinicssExtractPugin = require('mini-css-extract-pugin');

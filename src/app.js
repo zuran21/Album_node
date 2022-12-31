@@ -3,28 +3,15 @@ const morgan = require('morgan');
 const multer = require('multer');
 const path = require('path');
 var exphbs = require('express-handlebars');
-
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const Handlebars = require('handlebars');
-
-let sound = new Audio('/src/views/layouts/sound1.mp3');
-playBtn.addEventListener('click', ()=>{
-  sound.play();
-});
-pauseBtn.addEventListener('click', ()=>{
-  sound.pause();
-});
-//require('./public/main.css');
-
-//styles azvt
-//app.use(express.static('public'));
 
 // Inicializadores azvt
 const app = express();
 require('./database');
 
 // Settings
-app.set('port',process.env.PORT|| 4000);
+app.set('port',process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',
@@ -50,5 +37,7 @@ app.use(multer({storage}).single('image'));
 
 // Routes
 app.use(require('./routes'));
+
+
 
 module.exports = app;
